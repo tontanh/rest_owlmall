@@ -1,0 +1,21 @@
+*{
+  box-sizing: border-box;
+}
+ body{
+   margin: 0;
+   background: #e9ebee;
+   color: #1d2129;
+ }
+ .App {
+  /* height: 100vh; */
+  /* margin: 20; */
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.textlao{
+  
+  margin-left: 10px;
+}
