@@ -3,7 +3,7 @@
 }
  body{
    margin: 0;
-   background: #e9ebee;
+   background: #ffff;
    color: #1d2129;
  }
  .App {
@@ -12,10 +12,25 @@
   /* display: flex; */
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #ffff;
 }
 
 .textlao{
   
   margin-left: 10px;
+}
+.Rest{
+  /* justify-content: center; */
+  /* align-items: center; */
+  color: #FF0000;
+}
+.Rest_go{
+color: #0000FF;
+}
+.logo_img{
+  height: 100px;
+  width: 100px;
+}
+.HeaderText{
+  color: #FF0000;
 }

@@ -1,4 +1,4 @@
-import {Grid, Button,SvgIcon} from '@material-ui/core';
+import { Button,SvgIcon} from '@material-ui/core';
 import { ReactComponent as lao } from './assets/icons/laos.svg';
 import { ReactComponent as eng } from './assets/icons/english.svg';
 import { Link } from "react-router-dom";
@@ -11,10 +11,13 @@ toast.configure()
 
 function Home() {
     const notify = () => toast.info("Coming soon!" , { position: toast.POSITION.TOP_LEFT});
+    // function getAlert(){
+    //     alert("Coming soon!")
+    // }
     return (
         <div>
     <div>
-            <Link to="/qr_scanner"style={{ textDecoration: 'none' }}>
+    <Link to="/qr_scanner"style={{ textDecoration: 'none' }}>
         <Button
          variant="contained"
          color= "white"
