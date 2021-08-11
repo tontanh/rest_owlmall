@@ -26,8 +26,6 @@ function Home() {
            <h2 className = "textlao">ພາສາລາວ</h2>
         </Button> 
      </Link>
-    
-    
     </div>
     <br></br>
         <Button

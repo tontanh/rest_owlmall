@@ -2,11 +2,13 @@
 
 import React, {useEffect, useState} from 'react'
 import QrScan from 'react-qr-reader'
-// import {Link } from "react-router-dom";
+import {Link } from "react-router-dom";
 import axios from 'axios';
+import chair from '../assets/icons/chair.png';
+// import  welcome  from '../assets/icons/welcome.png';
 // import Storeid from '../class/Storeid';
 import '../styles/App.css'
-import Groupfood from '../pages/Groupfood';
+
 
 export default function QRtablescanner() {
  
@@ -22,16 +24,20 @@ export default function QRtablescanner() {
     }
     const [codeSt,setSt]=useState([]);
     // const [post,setPosts]=useState([]);
-   
+    const [store,setStore]=useState([])
+
+    const storeids = localStorage.getItem('storeid');
 
     var qrcut = qrscan.slice(6,20);
+    const strurl ='&store_id=';
     useEffect(()=>{
        
-        axios.get('https://owlmall.la/ton/api/rest_owlmall/query/search.php?store_id='+ qrcut)
+        axios.get('https://owlmall.la/ton/api/rest_owlmall/query/table_rest.php?table_number='+qrcut+strurl+storeids)
         .then(res => {
             // console.log(res)
             // setSt(res.status)
             setSt(res.status);
+            setStore(res.data);
             // setPosts(res.data.map(it => it.store_id));
         })
         .catch(err=>{
@@ -47,9 +53,16 @@ export default function QRtablescanner() {
         return(
            
             <div>
-           
-            <Groupfood/>
-           
+            <img className="logo_img"  src={chair} alt=""/>
+            <h3>ໂຕະເບີ <span> { store.map(str => <span>{str.table_number}</span>) }</span></h3>
+            <Link to='/groupfood' style={{ textDecoration: 'none' } }  >
+            
+                <button 
+                variant="contained"
+                 color= "white">
+                    <span className='Rest_go'>ສັ່ງອາຫານໃນໂຕະ <span> { store.map(str => <span>{str.table_number}</span>) }</span></span>
+                    </button> 
+            </Link> 
             </div>
         );
     }

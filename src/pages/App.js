@@ -12,7 +12,7 @@ import QRscanner from './scaner/QRscanner'
 import Services from './pages/Services'
 import Groupfood from './pages/Groupfood'
 import QRtablescanner from './scaner/QRtablescanner'
-
+import Foodlists from './pages/Foodlists'
 
 function App() {
   return (
@@ -42,6 +42,10 @@ function App() {
               <Route path="/groupfood">
                 <Groupfood/>
               </Route>  
+
+              <Route path="/foodlists/:id">
+                <Foodlists/>
+              </Route> 
 
               <Route path="/rest">
                 <Rest/>
