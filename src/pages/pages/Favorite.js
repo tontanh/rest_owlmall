@@ -6,7 +6,6 @@ import Home from '@material-ui/icons/Home';
 import PlaylistAddCheck from '@material-ui/icons/PlaylistAddCheck';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import { Link } from "react-router-dom";
-import Groupfoodinfo from './Groupfood_info'
 const useStyles = makeStyles({
     root: {
     //   width: 500,
@@ -23,21 +22,23 @@ const useStyles = makeStyles({
   });
   
 
-export default function Groupfood(){
+export default function Favorite(){
 
     const classes = useStyles();
-    const [value, setValue] = React.useState(0);
+    const [value, setValue] = React.useState(2);
 
     
     return(
+       
+       
         <div>
         <div>
-            <Groupfoodinfo/>
+           Coming soon!
         </div>
         <BottomNavigation
         value={value}
         onChange={(event, newValue) => {
-          setValue(newValue);
+          setValue(2);
         }}
         showLabels
         className={classes.root}

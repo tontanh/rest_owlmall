@@ -9,15 +9,21 @@ import {Link } from "react-router-dom";
 
 
 
-export default function GroupfoodCard(props){
+export default function FoodCard(props){
 
-   let gfPic  = props.product.groupfood_picture;
+   let gfPic  = props.product.food_picture;
+   const kip = 'ກິບ';
+   const space = ' ';
+   let price = props.product.food_price;
+   var nf = new Intl.NumberFormat();
+   const priceformat = nf.format(price);
+  let fId  = props.product.food_id;
    const urlpic ='https://owlmall.la/ton/api/rest_owlmall/images/'
-   let gfId  = props.product.groupfood_id;
-   const urllink = '/foodlists/'
+    // const urllink = '/foodlists/'
     return (
         <div>
-      <Link to={urllink+gfId} style={{ textDecoration: 'none' } } className='fgtext'> 
+      {/* <Link to={urllink+gfId} style={{ textDecoration: 'none' } } className='fgtext'>  */}
+      <Link to={'/foodview/'+fId} style={{ textDecoration: 'none' } } className='fgtext'> 
       {/* <Card variant="outlined">
       <CardContent> */}
       <ListItem>
@@ -27,8 +33,8 @@ export default function GroupfoodCard(props){
            
           </Avatar>
         </ListItemAvatar>
-        <ListItemText primary={props.product.groupfood_name}  />
-        {/* <ListItemText primary={props.product.groupfood_name} secondary={gfPic} /> */}
+        {/* <ListItemText primary={props.product.food_name}  /> */}
+        <ListItemText primary={props.product.food_name +space+ priceformat +space+ kip }  secondary={props.product.food_detail} />
       </ListItem>
       {/* </CardContent>
     </Card> */}

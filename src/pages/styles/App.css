@@ -17,7 +17,7 @@
 
 .textlao{
   
-  margin-left: 10px;
+  margin: 10px;
 }
 .Rest{
   /* justify-content: center; */
@@ -44,4 +44,25 @@ color: #0000FF;
 .avatar{
   
   background-color: white;
+}
+.mount{
+  width: 50px;
+  align-content: center;
+}
+.mountp{
+  border: none;
+  margin: 5px;
+  font-size: 16px;
+ background-color: rgb(50, 207, 50);
+}
+.mountm{
+  margin: 5px;
+  font-size: 16px;
+ background-color: #FF0000;
+ border: none;
+}
+.adds{
+  /* background-color: #FF0000; */
+  color: rgb(56, 146, 56);
+  margin-right: 10px;
 }

@@ -28,8 +28,9 @@ export default function QRtablescanner() {
 
     const storeids = localStorage.getItem('storeid');
 
-    var qrcut = qrscan.slice(6,20);
+   
     const strurl ='&store_id=';
+    var qrcut = qrscan.slice(6,20);
     useEffect(()=>{
        
         axios.get('https://owlmall.la/ton/api/rest_owlmall/query/table_rest.php?table_number='+qrcut+strurl+storeids)

@@ -1,12 +1,17 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import GroupfoodCard from './GroupfoodCard';
-// import { useParams } from 'react-router-dom';
- // const {id} = useParams()
-export default function Groupfood_info(){
+import FoodCard from './FoodCard';
+import { useParams } from 'react-router-dom';
+
+export default function Food_info(){
+    // const storeids = localStorage.getItem('storeid');
+    const {id} = useParams()
+
     const storeids = localStorage.getItem('storeid');
+
    
-    const url = 'https://owlmall.la/ton/api/rest_owlmall/query/searchgroupfood.php?store_id='+ storeids
+    const strurl ='&store_id=';
+    const url = 'https://owlmall.la/ton/api/rest_owlmall/query/food.php?groupfood_id='+ id +strurl+storeids;
     const [products ,setProducts] = useState({
         loading : false,
         data:null,
@@ -41,8 +46,8 @@ export default function Groupfood_info(){
 
     if (products.error) {
         content = <p>
-             <br></br>
-            ມີຂໍ້ຜິດພາດ
+            <br></br>
+            ຍັງບໍ່ມີຂໍ້ມູນ
         </p>
     }
     if (products.loading) {
@@ -54,17 +59,18 @@ export default function Groupfood_info(){
     if (products.data) {
         content = 
         products.data.map((product, key) =>
-        <div key={product.groupfood_id}>
-            <GroupfoodCard
+        <div key={product.food_id}>
+            <FoodCard
                 product={product}
             />
         </div>
         )
     }
+
     return(
         <div>
             <h3>
-                 ເລືອກປະເພດ ອາຫານ
+                 ເລືອກ ອາຫານ
             </h3>
             {content}
         </div>

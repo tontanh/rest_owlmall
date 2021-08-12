@@ -13,6 +13,9 @@ import Services from './pages/Services'
 import Groupfood from './pages/Groupfood'
 import QRtablescanner from './scaner/QRtablescanner'
 import Foodlists from './pages/Foodlists'
+import Favorite from './pages/Favorite'
+import Paylist from './pages/Paylist'
+import Foodview from './pages/Foodview'
 
 function App() {
   return (
@@ -45,6 +48,18 @@ function App() {
 
               <Route path="/foodlists/:id">
                 <Foodlists/>
+              </Route> 
+
+              <Route path="/paylist">
+                <Paylist/>
+              </Route> 
+
+              <Route path="/favorites">
+                <Favorite/>
+              </Route> 
+
+              <Route path="/foodview/:fid">
+                <Foodview/>
               </Route> 
 
               <Route path="/rest">
