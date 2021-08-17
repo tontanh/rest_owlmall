@@ -21,7 +21,7 @@ export default function QRtablescanner() {
   // const [post,setPosts]=useState([]);
   const [store, setStore] = useState([]);
 
-  const storeids = localStorage.getItem("storeid");
+  const storeids = localStorage.getItem("res_owlmall_version");
 
   const strurl = "&store_id=";
   var qrcut = qrscan.slice(6, 20);
@@ -46,7 +46,7 @@ export default function QRtablescanner() {
   });
 
   if (codeSt === 200) {
-    localStorage.setItem("tableid", qrcut);
+    localStorage.setItem("lagotech_version", qrcut);
     return (
       <div>
         <img className="logo_img" src={chair} alt="" />

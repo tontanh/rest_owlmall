@@ -43,7 +43,7 @@ function QRscanner() {
   });
 
   if (codeSt === 200) {
-    localStorage.setItem("storeid", qrcut);
+    localStorage.setItem("res_owlmall_version", qrcut);
     return (
       <div>
         <img className="logo_img" src={welcome} alt="" />

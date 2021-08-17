@@ -15,6 +15,7 @@ import Foodlists from "./pages/food/Foodlists";
 import Favorite from "./pages/favorite/Favorite";
 import Paylist from "./pages/paylist/Paylist";
 import Foodview from "./pages/food/Foodview";
+import History from "./pages/history/History";
 import "../App.css";
 function App() {
   return (
@@ -47,7 +48,7 @@ function App() {
                 <Foodlists />
               </Route>
 
-              <Route path="/paylist">
+              <Route path="/paylist/">
                 <Paylist />
               </Route>
 
@@ -57,6 +58,10 @@ function App() {
 
               <Route path="/foodview/:fid">
                 <Foodview />
+              </Route>
+
+              <Route path="/history">
+                <History />
               </Route>
 
               <Route path="/rest">

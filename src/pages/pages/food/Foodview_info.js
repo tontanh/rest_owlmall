@@ -44,7 +44,7 @@ export default function Foodview_info() {
   const classes = useStyles();
   const classesb = useStylesb();
   const [value, setValue] = React.useState(0);
-  const [txtDetail, settxtDetail] = useState();
+  const [txtDetail, settxtDetail] = useState("ລາຍລະອຽດ");
   const [count, setCount] = useState(1);
 
   const decrementCount = () => {
@@ -58,8 +58,8 @@ export default function Foodview_info() {
   const [store, setStore] = useState([]);
   const [pic, setPic] = useState([]);
   const [pri, setPri] = useState([]);
-  const storeids = localStorage.getItem("storeid");
-  const tableids = localStorage.getItem("tableid");
+  const storeids = localStorage.getItem("res_owlmall_version");
+  const tableids = localStorage.getItem("lagotech_version");
   const urlpick = "&store_id=";
   const url =
     "https://owlmall.la/ton/api/rest_owlmall/query/foodsingle.php?food_id=" +
@@ -206,6 +206,7 @@ export default function Foodview_info() {
           <SvgIcon component={basket} viewBox="0 0 512 512" />
         </Button>
       </div>
+      <div className="boxbot"></div>
       <div>
         <BottomNavigation
           value={value}
@@ -227,6 +228,12 @@ export default function Foodview_info() {
             component={Link}
             to={"/paylist"}
           />
+           <BottomNavigationAction
+          label="ປະຫວັດ"
+          icon={<PlaylistAddCheck />}
+          component={Link}
+          to={"/history"}
+        />
           <BottomNavigationAction
             label="ຍອດນິຍົມ"
             icon={<FavoriteIcon />}

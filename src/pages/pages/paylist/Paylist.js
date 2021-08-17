@@ -6,6 +6,8 @@ import Home from "@material-ui/icons/Home";
 import PlaylistAddCheck from "@material-ui/icons/PlaylistAddCheck";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import { Link } from "react-router-dom";
+import Paylistinfo from "./Paylist_info";
+
 const useStyles = makeStyles({
   root: {
     //   width: 500,
@@ -28,7 +30,7 @@ export default function Paylist() {
   return (
     <div>
       <div>
-        <span>paylist</span>
+        <Paylistinfo />
       </div>
       <BottomNavigation
         value={value}
@@ -49,6 +51,12 @@ export default function Paylist() {
           icon={<PlaylistAddCheck />}
           component={Link}
           to={"/paylist"}
+        />
+         <BottomNavigationAction
+          label="ປະຫວັດ"
+          icon={<PlaylistAddCheck />}
+          component={Link}
+          to={"/history"}
         />
         <BottomNavigationAction
           label="ຍອດນິຍົມ"

@@ -1,12 +1,12 @@
-*{
+* {
   box-sizing: border-box;
 }
- body{
-   margin: 0;
-   background: #ffff;
-   color: #1d2129;
- }
- .App {
+body {
+  margin: 0;
+  background: #ffff;
+  color: #1d2129;
+}
+.App {
   /* height: 100vh; */
   /* margin: 20; */
   /* display: flex; */
@@ -15,54 +15,73 @@
   color: #ffff;
 }
 
-.textlao{
-  
+.textlao {
   margin: 10px;
 }
-.Rest{
+.Rest {
   /* justify-content: center; */
   /* align-items: center; */
-  color: #FF0000;
+  color: #ff0000;
 }
-.Rest_go{
-color: #0000FF;
+.Rest_go {
+  color: #0000ff;
 }
-.logo_img{
+.logo_img {
   height: 100px;
   width: 100px;
 }
-.HeaderText{
-  color: #FF0000;
+.HeaderText {
+  color: #ff0000;
 }
-.gf_pic{
+.gf_pic {
   height: 30px;
   width: 30px;
 }
-.fgtext{
+.fgtext {
   color: black;
 }
-.avatar{
-  
+.avatar {
   background-color: white;
 }
-.mount{
+.mount {
   width: 50px;
   align-content: center;
 }
-.mountp{
+.mountp {
   border: none;
   margin: 5px;
   font-size: 16px;
- background-color: rgb(50, 207, 50);
+  background-color: rgb(50, 207, 50);
 }
-.mountm{
+.mountm {
   margin: 5px;
   font-size: 16px;
- background-color: #FF0000;
- border: none;
+  background-color: #ff0000;
+  border: none;
 }
-.adds{
+.adds {
   /* background-color: #FF0000; */
   color: rgb(56, 146, 56);
   margin-right: 10px;
+}
+.payCard {
+  height: 90px;
+
+  margin-bottom: 5px;
+}
+.boxtop {
+  height: 20px;
+}
+.boxbot {
+  height: 80px;
+}
+.list {
+  height: 10px;
+}
+.lists {
+  height: 10px;
+}
+.delete {
+  margin-top: 90px;
+  margin-left: 40px;
 }

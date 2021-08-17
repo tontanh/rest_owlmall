@@ -23,11 +23,11 @@ const useStyles = makeStyles({
 
 export default function Favorite() {
   const classes = useStyles();
-  const [value, setValue] = React.useState(2);
+  const [value, setValue] = React.useState(3);
 
   return (
     <div>
-      <div>Coming soon!</div>
+      <div>ກຳລັງພັດທະນາ</div>
       <BottomNavigation
         value={value}
         onChange={(event, newValue) => {
@@ -47,6 +47,12 @@ export default function Favorite() {
           icon={<PlaylistAddCheck />}
           component={Link}
           to={"/paylist"}
+        />
+         <BottomNavigationAction
+          label="ປະຫວັດ"
+          icon={<PlaylistAddCheck />}
+          component={Link}
+          to={"/history"}
         />
         <BottomNavigationAction
           label="ຍອດນິຍົມ"

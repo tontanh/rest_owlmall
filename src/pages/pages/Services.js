@@ -9,6 +9,7 @@ import "./styles/App.css";
 
 export default function Services() {
   const notify = () =>
+    //  alert("ກຳລັງພັດທະນາ");
     toast.info("Coming soon!", { position: toast.POSITION.TOP_LEFT });
 
   return (

@@ -1,20 +1,14 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import FoodCard from "./FoodCard";
-import { useParams } from "react-router-dom";
-import "./food.css";
-export default function Food_info() {
-  // const storeids = localStorage.getItem('storeid');
-  const { id } = useParams();
-
+import PaylistCard from "./PaylistCard";
+import './paylist.css'
+// import { useParams } from 'react-router-dom';
+// const {id} = useParams()
+export default function Paylist_info() {
   const storeids = localStorage.getItem("res_owlmall_version");
-
-  const strurl = "&store_id=";
+  const tableids = localStorage.getItem("lagotech_version");
   const url =
-    "https://owlmall.la/ton/api/rest_owlmall/query/food.php?groupfood_id=" +
-    id +
-    strurl +
-    storeids;
+    "https://owlmall.la/ton/api/rest_owlmall/query/paylist.php?store_id="+storeids+"&table_id="+tableids+"&order_status_id=1" ;
   const [products, setProducts] = useState({
     loading: false,
     data: null,
@@ -51,7 +45,7 @@ export default function Food_info() {
     content = (
       <p>
         <br></br>
-        ຍັງບໍ່ມີຂໍ້ມູນ
+        ມີບໍ່ມີລາຍການ
       </p>
     );
   }
@@ -65,18 +59,19 @@ export default function Food_info() {
   }
   if (products.data) {
     content = products.data.map((product, key) => (
-      <div key={product.food_id}>
-        <FoodCard product={product} />
+      <div key={product.groupfood_id}>
+        <PaylistCard product={product} />
+        
       </div>
     ));
   }
-
   return (
     <div>
       <div className="boxtop"></div>
-      <h3>ເລືອກ ອາຫານ</h3>
       {content}
-      <div className="boxbot"></div>
+      <span>ສັ່ງອາຫານ</span>
+      <div className = "boxbottom"></div>
+     
     </div>
   );
 }

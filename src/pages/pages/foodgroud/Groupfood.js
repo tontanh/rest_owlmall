@@ -52,6 +52,12 @@ export default function Groupfood() {
           to={"/paylist"}
         />
         <BottomNavigationAction
+          label="ປະຫວັດ"
+          icon={<PlaylistAddCheck />}
+          component={Link}
+          to={"/history"}
+        />
+        <BottomNavigationAction
           label="ຍອດນິຍົມ"
           icon={<FavoriteIcon />}
           component={Link}

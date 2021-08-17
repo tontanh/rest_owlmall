@@ -6,8 +6,6 @@ import Home from "@material-ui/icons/Home";
 import PlaylistAddCheck from "@material-ui/icons/PlaylistAddCheck";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import { Link } from "react-router-dom";
-import Foodinfo from "./Food_info";
-
 const useStyles = makeStyles({
   root: {
     //   width: 500,
@@ -22,20 +20,18 @@ const useStyles = makeStyles({
     width: "100%",
   },
 });
-export default function Foodlists() {
-  // const { id } = useParams()
-  // console.log('====='+id)
+
+export default function History() {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(2);
+
   return (
     <div>
-      <div>
-        <Foodinfo />
-      </div>
+      <div>History</div>
       <BottomNavigation
         value={value}
         onChange={(event, newValue) => {
-          setValue(newValue);
+          setValue(2);
         }}
         showLabels
         className={classes.root}
@@ -52,7 +48,7 @@ export default function Foodlists() {
           component={Link}
           to={"/paylist"}
         />
-         <BottomNavigationAction
+          <BottomNavigationAction
           label="ປະຫວັດ"
           icon={<PlaylistAddCheck />}
           component={Link}
