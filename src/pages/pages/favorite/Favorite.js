@@ -6,6 +6,7 @@ import Home from "@material-ui/icons/Home";
 import PlaylistAddCheck from "@material-ui/icons/PlaylistAddCheck";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import { Link } from "react-router-dom";
+import IcHistory from "@material-ui/icons/History";
 const useStyles = makeStyles({
   root: {
     //   width: 500,
@@ -48,9 +49,9 @@ export default function Favorite() {
           component={Link}
           to={"/paylist"}
         />
-         <BottomNavigationAction
+        <BottomNavigationAction
           label="ປະຫວັດ"
-          icon={<PlaylistAddCheck />}
+          icon={<IcHistory />}
           component={Link}
           to={"/history"}
         />

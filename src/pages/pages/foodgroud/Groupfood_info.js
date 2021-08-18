@@ -68,7 +68,7 @@ export default function Groupfood_info() {
   return (
     <div>
       <div className="boxtop"></div>
-      <h3>ເລືອກປະເພດ ອາຫານ</h3>
+      {/* <h3>ເລືອກປະເພດ ອາຫານ</h3> */}
       {content}
       <div className="boxbot"></div>
     </div>

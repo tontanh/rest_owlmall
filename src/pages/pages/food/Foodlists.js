@@ -7,7 +7,7 @@ import PlaylistAddCheck from "@material-ui/icons/PlaylistAddCheck";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import { Link } from "react-router-dom";
 import Foodinfo from "./Food_info";
-
+import IcHistory from "@material-ui/icons/History";
 const useStyles = makeStyles({
   root: {
     //   width: 500,
@@ -52,9 +52,9 @@ export default function Foodlists() {
           component={Link}
           to={"/paylist"}
         />
-         <BottomNavigationAction
+        <BottomNavigationAction
           label="ປະຫວັດ"
-          icon={<PlaylistAddCheck />}
+          icon={<IcHistory />}
           component={Link}
           to={"/history"}
         />

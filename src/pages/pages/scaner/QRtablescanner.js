@@ -41,7 +41,7 @@ export default function QRtablescanner() {
         // setPosts(res.data.map(it => it.store_id));
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
       });
   });
 

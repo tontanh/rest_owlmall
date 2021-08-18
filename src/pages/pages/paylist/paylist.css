@@ -16,3 +16,16 @@
   border-top-left-radius: 5px;
   /* bottom: 1px; */
 }
+.orderBt {
+  font-size: 14px;
+  color: white;
+  background-color: green;
+  border: none;
+  height: 35px;
+  width: 200px;
+  border-radius: 10px;
+  /* bottom: 1px; */
+}
+.box {
+  height: 10px;
+}

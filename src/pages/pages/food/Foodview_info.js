@@ -14,7 +14,7 @@ import { useHistory } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 // import Orders from './components/orders';
-
+import IcHistory from "@material-ui/icons/History";
 const useStyles = makeStyles((theme) => ({
   root: {
     "& > *": {
@@ -80,7 +80,7 @@ export default function Foodview_info() {
         setPri(res.data.map((it) => it.food_price));
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
       });
   }, [url]);
   const price = pri;
@@ -109,31 +109,8 @@ export default function Foodview_info() {
       txtDetail;
 
     axios.post(urls).then((response) => {
-      console.log(response);
+      // console.log(response);
     });
-    // .catch(function (error) {
-    //   console.log(error);
-    // });
-    // fetch("https://owlmall.la/ton/api/rest_owlmall/query/orderbyuser.php", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify({
-    //     store_id: 1,
-    //     food_id: 1,
-    //     table_id: 1,
-    //     order_number: 1,
-    //     order_detail: 1,
-    //   })
-    //     .then((post) => {
-    //       console.log("=====" + post);
-    //     })
-    //     .catch((err) => {
-    //       console.log("=====" + err);
-    //     }),
-    // });
-
-    // console.log("==================== please help me" + count);
-    // alert("hiiiiiiiiiii" + txtDetail);
   };
 
   const goBack = async () => {
@@ -228,12 +205,12 @@ export default function Foodview_info() {
             component={Link}
             to={"/paylist"}
           />
-           <BottomNavigationAction
-          label="ປະຫວັດ"
-          icon={<PlaylistAddCheck />}
-          component={Link}
-          to={"/history"}
-        />
+          <BottomNavigationAction
+            label="ປະຫວັດ"
+            icon={<IcHistory />}
+            component={Link}
+            to={"/history"}
+          />
           <BottomNavigationAction
             label="ຍອດນິຍົມ"
             icon={<FavoriteIcon />}

@@ -17,13 +17,19 @@ export default function PaylistCard(props) {
         const urls = "https://owlmall.la/ton/api/rest_owlmall/query/deletepaylist.php?order_id=" +orderId;
     
         axios.post(urls).then((response) => {
-          console.log(response);
+          // console.log(response);
           window.location.reload(); 
         });
       };
 
-  let gfPic = props.product.food_picture;
-  const urlpic = "https://owlmall.la/ton/api/rest_owlmall/images/";
+      const kip = "ກິບ";
+      const space = " ";
+  
+    let gfPic = props.product.food_picture;
+    const urlpic = "https://owlmall.la/ton/api/rest_owlmall/images/";
+    let price = props.product.food_price;
+    var nf = new Intl.NumberFormat();
+    const priceformat = nf.format(price);
  
 
   return (
@@ -37,7 +43,7 @@ export default function PaylistCard(props) {
  
             </Avatar>
           </ListItemAvatar>
-          <ListItemText primary={props.product.food_name+props.product.food_price} secondary={props.product.order_detail} className = 'lists'/>
+          <ListItemText primary={props.product.food_name+space+priceformat+ space + kip} secondary={props.product.order_detail} className = 'lists'/>
 
           <div className = 'delete'>
           <button className="deletebt" onClick={ordersput}>
