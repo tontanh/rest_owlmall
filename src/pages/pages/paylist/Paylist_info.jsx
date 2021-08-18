@@ -78,6 +78,10 @@ export default function Paylist_info() {
       window.location.reload(); 
       // console.log(orderId);
 
+    }).then(()=>{
+      alert("ສຳເລັດ")
+    }).catch(()=>{
+      alert("ບໍ່ມີລາຍການ")
     });
   };
 
