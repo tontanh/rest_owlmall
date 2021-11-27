@@ -41,7 +41,7 @@ export default function Foodlists() {
         className={classes.root}
       >
         <BottomNavigationAction
-          label="ໜ້າຫຼັກ"
+          label="ເມນູ"
           icon={<Home />}
           component={Link}
           to={"/groupfood"}

@@ -28,7 +28,7 @@ export default function QRtablescanner() {
   useEffect(() => {
     axios
       .get(
-        "https://owlmall.la/ton/api/rest_owlmall/query/table_rest.php?table_number=" +
+        "https://owlmall.la/food/api/rest_owlmall/query/table_rest.php?table_number=" +
           qrcut +
           strurl +
           storeids

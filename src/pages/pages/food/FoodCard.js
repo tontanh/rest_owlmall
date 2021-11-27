@@ -15,7 +15,7 @@ export default function FoodCard(props) {
   var nf = new Intl.NumberFormat();
   const priceformat = nf.format(price);
   let fId = props.product.food_id;
-  const urlpic = "https://owlmall.la/ton/api/rest_owlmall/images/";
+  const urlpic = "https://owlmall.la/food/api/rest_owlmall/images/";
   // const urllink = '/foodlists/'
   return (
     <div>

@@ -14,7 +14,7 @@ import axios from "axios";
 export default function PaylistCard(props) {
  let orderId = props.product.order_id;
   const ordersput = () => {
-        const urls = "https://owlmall.la/ton/api/rest_owlmall/query/deletepaylist.php?order_id=" +orderId;
+        const urls = "https://owlmall.la/food/api/rest_owlmall/query/deletepaylist.php?order_id=" +orderId;
     
         axios.post(urls).then((response) => {
           // console.log(response);
@@ -26,7 +26,7 @@ export default function PaylistCard(props) {
       const space = " ";
   
     let gfPic = props.product.food_picture;
-    const urlpic = "https://owlmall.la/ton/api/rest_owlmall/images/";
+    const urlpic = "https://owlmall.la/food/api/rest_owlmall/images/";
     let price = props.product.food_price;
     var nf = new Intl.NumberFormat();
     const priceformat = nf.format(price);

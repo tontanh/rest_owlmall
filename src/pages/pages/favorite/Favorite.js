@@ -38,7 +38,7 @@ export default function Favorite() {
         className={classes.root}
       >
         <BottomNavigationAction
-          label="ໜ້າຫຼັກ"
+          label="ເມນູ"
           icon={<Home />}
           component={Link}
           to={"/groupfood"}

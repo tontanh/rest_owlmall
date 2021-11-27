@@ -8,7 +8,7 @@ export default function Paylist_info() {
   const storeids = localStorage.getItem("res_owlmall_version");
   const tableids = localStorage.getItem("lagotech_version");
   const url =
-    "https://owlmall.la/ton/api/rest_owlmall/query/history.php?store_id="+storeids+"&table_id="+tableids+"&order_status_id=2" ;
+    "https://owlmall.la/food/api/rest_owlmall/query/history.php?store_id="+storeids+"&table_id="+tableids;
   const [products, setProducts] = useState({
     loading: false,
     data: null,

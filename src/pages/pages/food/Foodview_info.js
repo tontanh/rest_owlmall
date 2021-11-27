@@ -62,13 +62,13 @@ export default function Foodview_info() {
   const tableids = localStorage.getItem("lagotech_version");
   const urlpick = "&store_id=";
   const url =
-    "https://owlmall.la/ton/api/rest_owlmall/query/foodsingle.php?food_id=" +
+    "https://owlmall.la/food/api/rest_owlmall/query/foodsingle.php?food_id=" +
     fid +
     urlpick +
     storeids;
   // console.log('======'+fid)
   useEffect(() => {
-    // axios.get('https://owlmall.la/ton/api/rest_owlmall/query/food.php?food_id='+ fid + urlpick + storeids )
+    
 
     axios
       .get(url)
@@ -94,10 +94,10 @@ export default function Foodview_info() {
   //   order_number: 1,
   //   order_detail: "1",
   // });
-  // "https://owlmall.la/ton/api/rest_owlmall/query/orderbyuser.php?store_id="+{storeids}+{"&food_id="}+{fid}+{"1&table_id="}+tableids+{"&order_number=1&order_detail=ສະບາຍດີ'"};
+  // "https://owlmall.luery/orderbyuser.php?store_id="+{storeids}+{"&food_id="}+{fid}+{"1&table_id="}+tableids+{"&order_number=1&order_detail=ສະບາຍດີ'"};
   const ordersput = () => {
     const urls =
-      "https://owlmall.la/ton/api/rest_owlmall/query/orderbyuser.php?store_id=" +
+      "https://owlmall.la/food/api/rest_owlmall/query/orderbyuser.php?store_id=" +
       storeids +
       "&food_id=" +
       fid +
@@ -142,7 +142,7 @@ export default function Foodview_info() {
       <br></br>
       <img
         className="logo_img"
-        src={"https://owlmall.la/ton/api/rest_owlmall/images/" + pic}
+        src={"https://owlmall.la/food/api/rest_owlmall/images/" + pic}
         alt=""
       />
       <br></br>
@@ -194,7 +194,7 @@ export default function Foodview_info() {
           className={classesb.root}
         >
           <BottomNavigationAction
-            label="ໜ້າຫຼັກ"
+            label="ເມນູ"
             icon={<Home />}
             component={Link}
             to={"/groupfood"}

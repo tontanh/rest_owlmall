@@ -8,7 +8,7 @@ export default function Groupfood_info() {
   const storeids = localStorage.getItem("res_owlmall_version");
 
   const url =
-    "https://owlmall.la/ton/api/rest_owlmall/query/searchgroupfood.php?store_id=" +
+    "https://owlmall.la/food/api/rest_owlmall/query/searchgroupfood.php?store_id=" +
     storeids;
   const [products, setProducts] = useState({
     loading: false,

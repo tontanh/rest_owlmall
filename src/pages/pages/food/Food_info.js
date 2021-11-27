@@ -11,7 +11,7 @@ export default function Food_info() {
 
   const strurl = "&store_id=";
   const url =
-    "https://owlmall.la/ton/api/rest_owlmall/query/food.php?groupfood_id=" +
+    "https://owlmall.la/food/api/rest_owlmall/query/food.php?groupfood_id=" +
     id +
     strurl +
     storeids;

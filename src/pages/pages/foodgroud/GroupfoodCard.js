@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 export default function GroupfoodCard(props) {
   let gfPic = props.product.groupfood_picture;
-  const urlpic = "https://owlmall.la/ton/api/rest_owlmall/images/";
+  const urlpic = "https://owlmall.la/food/api/rest_owlmall/images/";
   let gfId = props.product.groupfood_id;
   const urllink = "/foodlists/";
   return (

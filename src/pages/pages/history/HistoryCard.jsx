@@ -13,7 +13,7 @@ export default function HistoryCard(props) {
     const space = " ";
 
   let gfPic = props.product.food_picture;
-  const urlpic = "https://owlmall.la/ton/api/rest_owlmall/images/";
+  const urlpic = "https://owlmall.la/food/api/rest_owlmall/images/";
   let price = props.product.food_price;
   var nf = new Intl.NumberFormat();
   const priceformat = nf.format(price);
@@ -27,7 +27,7 @@ export default function HistoryCard(props) {
  
             </Avatar>
           </ListItemAvatar>
-          <ListItemText primary={props.product.food_name + space + priceformat+ space + kip} secondary={props.product.order_time} className = 'lists'/>
+          <ListItemText primary={props.product.food_name + space + priceformat+ space + kip} secondary={props.product.order_time+ space +props.product.order_status_name} className = 'lists'/>
 
         </ListItem>
         
